@@ -8,14 +8,13 @@ import Login from '../auth/logIn/LogIn';
 import SignUp from '../auth/signUp/SignUp';
 import Home from '../screens/home/Home';
 import AddNewTask from '../screens/addNewTask/AddNewTask';
-import Settings from '../auth/profile/settings/Settings';
 import ListView from '../screens/tabNav/listView/ListView';
 import AddTask from '../screens/tabNav/addTask/AddTask';
-import CalenderView from '../screens/tabNav/calenderView/CalenderView';
 import HomeIcon from 'react-native-vector-icons/Octicons';
 import HomeCircleIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Edit from '../auth/profile/edit/Edit';
 import ForgetPassword from '../auth/forgetPassword/ForgetPassword';
+import Settings from '../screens/tabNav/profile/settings/Settings';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -51,8 +50,8 @@ const TabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Calender View"
-        component={CalenderView}
+        name="Settings"
+        component={Settings}
         options={{
           tabBarIcon: ({color, size}) => (
             <HomeIcon name="home" size={size} color={color} />

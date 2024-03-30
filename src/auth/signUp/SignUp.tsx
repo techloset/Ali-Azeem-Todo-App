@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import CustomBackButtonHeading from '../../components/customBackButtonHeading/CustomBackButtonHeading';
 import Placeholder from '../../components/placeholder/Placeholder';
 import ClickButton from '../../components/clickButton/ClickButton';
 import CheckBox from 'react-native-check-box';
 import useSignUp from './useSignup';
-import signUpStyles from './styles';
+import signUpStyles from './signupStyles';
 
 const SignUp = ({navigation}: any) => {
   const {

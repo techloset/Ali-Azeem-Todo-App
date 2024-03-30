@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
-import CustomBackButtonHeading from '../../../components/customBackButtonHeading/CustomBackButtonHeading';
+import CustomBackButtonHeading from '../../../../components/customBackButtonHeading/CustomBackButtonHeading';
 
 const Settings = ({navigation}: any) => {
   return (
@@ -13,7 +13,7 @@ const Settings = ({navigation}: any) => {
         <View style={styles.profile}>
           <View>
             <Image
-              source={require('../../../../assets/MyPic.png')}
+              source={require('../../../../../assets/MyPic.png')}
               style={styles.dp}
             />
           </View>
@@ -24,7 +24,7 @@ const Settings = ({navigation}: any) => {
           <View>
             <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
               <Image
-                source={require('../../../../assets/edit.png')}
+                source={require('../../../../../assets/edit.png')}
                 style={styles.edit}
               />
             </TouchableOpacity>
@@ -38,7 +38,7 @@ const Settings = ({navigation}: any) => {
             <Text style={styles.changePasswordText}>Change Password</Text>
           </View>
           <View>
-            <Image source={require('../../../../assets/nextButton.png')} />
+            <Image source={require('../../../../../assets/nextButton.png')} />
           </View>
         </View>
         <View>

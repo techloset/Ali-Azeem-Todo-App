@@ -12,7 +12,12 @@
           "package_name": "com.todo"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "39661618913-aqrpsfrru0qkq4sr72ejcukpracb0gvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBv7X3jPXMW26HDFr0irgI5UsSbxMvdUGk"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39661618913-aqrpsfrru0qkq4sr72ejcukpracb0gvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

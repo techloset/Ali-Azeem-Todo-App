@@ -13,10 +13,7 @@ const ListView = ({navigation}: any) => {
     <View style={styles.screen}>
       <View style={styles.container}>
         <View style={styles.Img}>
-          <Image
-            source={require('../../../../assets/screenLogo.png')}
-            style={styles.topImage}
-          />
+          <Image source={require('../../../../assets/screenLogo.png')} />
           <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
             <Image
               source={require('../../../../assets/settings.png')}
@@ -53,17 +50,16 @@ const styles = StyleSheet.create({
   },
   container: {
     marginHorizontal: 15,
+    marginTop: 20,
   },
   Img: {
     alignItems: 'center',
     flexDirection: 'column',
   },
-  topImage: {
-    marginTop: 20,
-  },
   settings: {
     marginLeft: 325,
-    bottom: 20,
+    bottom: 23,
+    height: 25,
   },
   searchBar: {
     marginTop: 18,
