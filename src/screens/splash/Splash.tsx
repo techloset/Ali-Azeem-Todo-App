@@ -10,7 +10,8 @@ interface SplashProps {
 const Splash: React.FC<SplashProps> = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('Intro');
+      // navigation.navigate('Intro');
+      navigation.navigate('Home');
     }, 2000);
   }, []);
   return (

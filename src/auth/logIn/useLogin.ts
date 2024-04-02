@@ -176,6 +176,8 @@
 //   };
 // };
 // export default useLogin;
+
+//
 import React, {useEffect, useState} from 'react';
 import {Alert} from 'react-native';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
@@ -189,11 +191,12 @@ const useLogin = ({navigation}: any) => {
   useEffect(() => {
     // Configure Google Sign-In
     GoogleSignin.configure({
-      webClientId: 'YOUR_WEB_CLIENT_ID_HERE',
+      webClientId:
+        '39661618913-aqrpsfrru0qkq4sr72ejcukpracb0gvv.apps.googleusercontent.com',
     });
   }, []);
 
-  const handleSignIn = () => {
+  const handleLogIn = () => {
     if (!email || !password) {
       Alert.alert('Please enter your email and password');
       return;
@@ -202,7 +205,7 @@ const useLogin = ({navigation}: any) => {
       .signInWithEmailAndPassword(email, password)
       .then(userCredential => {
         if (userCredential?.user?.email) {
-          Alert.alert('User logged in successfully');
+          // Alert.alert('User logged in successfully');
           navigation.navigate('Home');
         }
       })
@@ -242,10 +245,7 @@ const useLogin = ({navigation}: any) => {
       return user;
     } catch (error) {
       console.error('Google Sign-In Error:', error);
-      Alert.alert(
-        'Google Sign-In Error',
-        error.message || 'An unknown error occurred',
-      );
+      Alert.alert('Google Sign-In Error' || 'An unknown error occurred');
       throw error;
     }
   };
@@ -254,7 +254,7 @@ const useLogin = ({navigation}: any) => {
     email,
     setEmail,
     setPassword,
-    handleSignIn,
+    handleLogIn,
     password,
     GoogleSignIn,
   };

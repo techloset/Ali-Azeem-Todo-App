@@ -1,37 +1,60 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {useNavigation} from '@react-navigation/native';
+
 import ListView from '../screens/tabNav/listView/ListView';
 import AddTask from '../screens/tabNav/addTask/AddTask';
-import HomeIcon from 'react-native-vector-icons/Octicons';
-import HomeCircleIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Profile from '../screens/tabNav/profile/Profile';
+import TabBarIcon from '../components/tabBarIcon/TabBarIcon';
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
+  const navigation = useNavigation();
+
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#7EBB4F',
-        tabBarInactiveTintColor: 'gray',
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          height: 87,
+        },
       }}>
       <Tab.Screen
-        name="List View"
+        name="ListView"
         component={ListView}
         options={{
-          tabBarIcon: ({color, size}) => (
-            <HomeIcon name="home" size={size} color={color} />
+          tabBarIcon: ({focused}) => (
+            <TabBarIcon
+              focused={focused}
+              source={require('../../assets/listView.png')}
+              lable={'List View'}
+            />
           ),
         }}
       />
       <Tab.Screen
-        name="Add Task"
+        name="AddTask"
         component={AddTask}
         options={{
-          tabBarIcon: ({color}) => (
-            <HomeCircleIcon
-              name="home-circle-outline"
-              size={35}
-              color={color}
+          tabBarIcon: ({focused}) => (
+            <TabBarIcon
+              focused={focused}
+              source={require('../../assets/add.png')}
+              lable={'Add Task'}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <TabBarIcon
+              focused={focused}
+              source={require('../../assets/user.png')}
+              lable={'Profile'}
             />
           ),
         }}
@@ -39,5 +62,4 @@ const TabNavigation = () => {
     </Tab.Navigator>
   );
 };
-
 export default TabNavigation;
