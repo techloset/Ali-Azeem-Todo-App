@@ -38,11 +38,12 @@ const Styles = StyleSheet.create({
   },
   centerTextHead: {
     color: 'black',
-    fontWeight: 'bold',
+    fontWeight: '700',
     fontSize: 18,
   },
   centerTextBody: {
-    fontWeight: '500',
+    fontWeight: '400',
+    fontSize: 14,
   },
 });
 

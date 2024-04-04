@@ -1,5 +1,6 @@
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
+import Colors from '../../utils/Colors';
 
 const ClickButton = ({text, onPress}: any) => {
   return (
@@ -12,8 +13,8 @@ const ClickButton = ({text, onPress}: any) => {
 const styles = StyleSheet.create({
   buttonContainer: {
     borderWidth: 1,
-    borderColor: '#7EBB4F',
-    backgroundColor: '#7EBB4F',
+    borderColor: Colors.Green,
+    backgroundColor: Colors.Green,
     width: '100%',
     borderRadius: 5,
   },

@@ -1,12 +1,11 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import {configureStore} from '@reduxjs/toolkit';
+import TodoReducer from '../slices/TodoSlice';
 
-const Store = () => {
-  return (
-    <View>
-      <Text>Store</Text>
-    </View>
-  );
-};
+export const store = configureStore({
+  reducer: {
+    Todo: TodoReducer,
+  },
+});
 
-export default Store;
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.dispatch>;

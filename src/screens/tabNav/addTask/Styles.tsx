@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const AddTaskStyles = StyleSheet.create({
   screen: {
@@ -20,6 +20,15 @@ const AddTaskStyles = StyleSheet.create({
   },
   label: {
     color: 'black',
+    marginTop: 10,
+  },
+  inputSimple: {
+    borderWidth: 1,
+    borderColor: '#D2D2D2',
+    borderRadius: 5,
+    color: 'black',
+    marginTop: 5,
+    padding: 10,
   },
   input: {
     borderWidth: 1,
@@ -28,6 +37,7 @@ const AddTaskStyles = StyleSheet.create({
     color: 'black',
     marginTop: 5,
     padding: 10,
+    paddingBottom: 50,
     minHeight: 90,
   },
   reminder: {
@@ -69,8 +79,7 @@ const AddTaskStyles = StyleSheet.create({
     marginRight: 15,
   },
   buttonContainer: {
-    marginTop: 180,
-    marginRight: 15,
+    marginTop: '50%',
   },
 });
 

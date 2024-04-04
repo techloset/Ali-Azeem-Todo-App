@@ -1,28 +1,42 @@
-/**
- * @format
- */
+// /**
+//  * @format
+//  */
+
+// import {AppRegistry} from 'react-native';
+// import App from './App';
+// import {name as appName} from './app.json';
+
+// AppRegistry.registerComponent(appName, () => App);
+
+// // Root.js
+
+// // import React from 'react';
+// // import {Provider} from 'react-redux';
+// // import {AppRegistry} from 'react-native';
+// // import App from './App';
+// // import {name as appName} from './app.json';
+// // import store from './src/redux/store/Store'; // Import your Redux store
+
+// // const Root = () => {
+// //   return (
+// //     <Provider store={store}>
+// //       <App />
+// //     </Provider>
+// //   );
+// // };
+
+// // AppRegistry.registerComponent(appName, () => Root);
 
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store/Store';
 
-AppRegistry.registerComponent(appName, () => App);
+const Root = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
 
-// Root.js
-
-// import React from 'react';
-// import {Provider} from 'react-redux';
-// import {AppRegistry} from 'react-native';
-// import App from './App';
-// import {name as appName} from './app.json';
-// import store from './src/redux/store/Store'; // Import your Redux store
-
-// const Root = () => {
-//   return (
-//     <Provider store={store}>
-//       <App />
-//     </Provider>
-//   );
-// };
-
-// AppRegistry.registerComponent(appName, () => Root);
+AppRegistry.registerComponent(appName, () => Root);

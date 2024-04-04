@@ -8,7 +8,7 @@ const Profile = ({navigation}: any) => {
     <View style={Styles.screen}>
       <View style={Styles.container}>
         <CustomBackButtonHeading
-          title={'Settings'}
+          title={'Profile'}
           titleStyle={Styles.titleStyle}
         />
         <View style={Styles.profile}>

@@ -6,6 +6,7 @@ import ListView from '../screens/tabNav/listView/ListView';
 import AddTask from '../screens/tabNav/addTask/AddTask';
 import Profile from '../screens/tabNav/profile/Profile';
 import TabBarIcon from '../components/tabBarIcon/TabBarIcon';
+import TabBarAddIcon from '../components/tabBarIcon/TabBarAddIcon';
 
 const TabNavigation = () => {
   const Tab = createBottomTabNavigator();
@@ -38,7 +39,7 @@ const TabNavigation = () => {
         component={AddTask}
         options={{
           tabBarIcon: ({focused}) => (
-            <TabBarIcon
+            <TabBarAddIcon
               focused={focused}
               source={require('../../assets/add.png')}
               lable={'Add Task'}
@@ -62,4 +63,5 @@ const TabNavigation = () => {
     </Tab.Navigator>
   );
 };
+
 export default TabNavigation;
