@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import ListView from '../screens/tabNav/listView/ListView';
 import AddTask from '../screens/tabNav/addTask/AddTask';
-import Profile from '../screens/tabNav/profile/Profile';
+import Profile from '../screens/tabNav/profile/ProfileTab';
 import TabBarIcon from '../components/tabBarIcon/TabBarIcon';
 import TabBarAddIcon from '../components/tabBarIcon/TabBarAddIcon';
 

@@ -10,10 +10,16 @@ interface SplashProps {
 const Splash: React.FC<SplashProps> = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      // navigation.navigate('Intro');
-      navigation.navigate('Home');
+      navigation.navigate('Intro');
+      // navigation.navigate('Home');
     }, 2000);
   }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     // navigation.navigate('Intro');
+  //     navigation.navigate('Home');
+  //   }, 2000);
+  // }, []);
   return (
     <View style={styles.screen}>
       <Animatable.Image

@@ -108,13 +108,16 @@
 // export default App;
 
 import React from 'react';
-import AppNavigation from './src/navigation/AppNavigation';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Navigation from './src/navigation/Navigation';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   return (
     <SafeAreaProvider>
-      <AppNavigation />
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 };

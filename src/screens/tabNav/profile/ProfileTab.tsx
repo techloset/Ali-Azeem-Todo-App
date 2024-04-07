@@ -1,9 +1,19 @@
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
 import React from 'react';
 import CustomBackButtonHeading from '../../../components/customBackButtonHeading/CustomBackButtonHeading';
 import Styles from './Styles';
 
-const Profile = ({navigation}: any) => {
+import auth from '@react-native-firebase/auth';
+
+const ProfileTab = ({navigation}: any) => {
+  const user = auth()?.currentUser;
+
+  const signout = async () => {
+    await auth().signOut();
+    Alert.alert('User Signout');
+    navigation.navigate('Login');
+  };
+
   return (
     <View style={Styles.screen}>
       <View style={Styles.container}>
@@ -42,9 +52,12 @@ const Profile = ({navigation}: any) => {
             <Image source={require('../../../../assets/nextButton.png')} />
           </View>
         </View>
-        <View>
+        <TouchableOpacity
+          onPress={() => {
+            signout();
+          }}>
           <Text style={Styles.signOut}>Sign Out</Text>
-        </View>
+        </TouchableOpacity>
         <View style={Styles.end}>
           <Text style={Styles.endText}>Todo App</Text>
         </View>
@@ -53,4 +66,4 @@ const Profile = ({navigation}: any) => {
   );
 };
 
-export default Profile;
+export default ProfileTab;

@@ -38,7 +38,7 @@ const loginStyles = StyleSheet.create({
   },
   googleAuth: {
     alignItems: 'center',
-    marginTop: '4%',
+    marginTop: '10%',
   },
   or: {
     alignItems: 'center',
@@ -46,9 +46,14 @@ const loginStyles = StyleSheet.create({
   },
   googleIcon: {
     marginTop: '5%',
+    width: 70,
+    height: 70,
+    borderWidth: 1,
+    borderColor: 'lightgrey',
+    borderRadius: 40,
   },
   bottom: {
-    marginTop: '15%',
+    marginTop: '57%',
   },
   bottomContainer: {
     flexDirection: 'row',

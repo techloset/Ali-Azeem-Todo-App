@@ -24,7 +24,8 @@ const signUpStyles = StyleSheet.create({
     marginBottom: 30,
   },
   bottom: {
-    marginTop: 160,
+    // marginTop: 150,
+    marginTop: '47%',
   },
   bottomContainer: {
     flexDirection: 'row',
@@ -39,6 +40,9 @@ const signUpStyles = StyleSheet.create({
     color: '#7EBB4F',
     marginLeft: 5,
     fontSize: 15,
+  },
+  error: {
+    color: 'red',
   },
 });
 

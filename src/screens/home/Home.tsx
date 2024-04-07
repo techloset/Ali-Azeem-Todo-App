@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import TabNavigation from '../../navigation/TabNavigation';
+import Navigation from '../../navigation/Navigation';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <TabNavigation />
+      <Navigation />
     </View>
   );
 };

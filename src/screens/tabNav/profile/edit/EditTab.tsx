@@ -1,10 +1,10 @@
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import React from 'react';
-import CustomBackButtonHeading from '../../../components/customBackButtonHeading/CustomBackButtonHeading';
-import Placeholder from '../../../components/placeholder/Placeholder';
-import ClickButton from '../../../components/clickButton/ClickButton';
+import CustomBackButtonHeading from '../../../../components/customBackButtonHeading/CustomBackButtonHeading';
+import Placeholder from '../../../../components/placeholder/Placeholder';
+import ClickButton from '../../../../components/clickButton/ClickButton';
 
-const Edit = ({navigation}: any) => {
+const EditTab = () => {
   return (
     <View style={styles.screen}>
       <View style={styles.container}>
@@ -14,7 +14,7 @@ const Edit = ({navigation}: any) => {
         />
         <View style={styles.profile}>
           <Image
-            source={require('../../../../assets/MyPic.png')}
+            source={require('../../../../../assets/MyPic.png')}
             style={styles.dp}
           />
         </View>
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Edit;
+export default EditTab;

@@ -40,3 +40,11 @@ const Root = () => (
 );
 
 AppRegistry.registerComponent(appName, () => Root);
+
+// import {AppRegistry} from 'react-native';
+// import App from './App';
+// import {name as appName} from './app.json';
+
+// const Root = () => <App />;
+
+// AppRegistry.registerComponent(appName, () => Root);

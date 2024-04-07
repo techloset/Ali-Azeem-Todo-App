@@ -45,6 +45,12 @@ const Styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 14,
   },
+  loaderContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '70%',
+  },
 });
 
 export default Styles;
