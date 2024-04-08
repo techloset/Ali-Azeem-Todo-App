@@ -190,8 +190,11 @@ const AddTaskStyles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 5,
   },
-  selectedTagOption: {
-    backgroundColor: '#aaa',
+  selectedTagOptionUrgent: {
+    backgroundColor: '#BA1735',
+  },
+  selectedTagOptionNormal: {
+    backgroundColor: '#427DFE',
   },
   tagText: {
     color: 'black',

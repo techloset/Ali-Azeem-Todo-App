@@ -9,7 +9,7 @@ const Styles = StyleSheet.create({
     marginHorizontal: 15,
     marginTop: 20,
   },
-  Img: {
+  logo: {
     alignItems: 'center',
     flexDirection: 'column',
   },
@@ -50,6 +50,56 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '70%',
+  },
+  dataContainer: {
+    flex: 1,
+    padding: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'lightblue',
+    marginTop: 5,
+    borderRadius: 5,
+    marginBottom: 5,
+    shadowColor: 'red',
+    shadowOffset: {width: 10, height: 12},
+    shadowRadius: 1,
+  },
+  title: {
+    fontWeight: '700',
+    fontSize: 30,
+    color: 'black',
+  },
+  note: {
+    fontSize: 15,
+    color: 'black',
+  },
+  tags: {
+    // marginTop: 8,
+    // width: 49,
+    // height: 20,
+    // fontSize: 25,
+    // // fontWeight: 'bold',
+    // // color: 'red',
+    // borderWidth: 1,
+    // borderRadius: 5,
+    // textAlign: 'center',
+    // backgroundColor: '#427DFE',
+  },
+  tagText: {
+    color: 'black',
+    fontSize: 18,
+    textAlign: 'center',
+  },
+  optionContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
+  options: {
+    width: 20,
+    height: 30,
+    left: 20,
   },
 });
 
