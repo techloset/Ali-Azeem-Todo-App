@@ -447,7 +447,9 @@ const ListView = () => {
                     <Text style={styles.title}>{item.title}</Text>
                     <Text style={styles.note}>{item.note}</Text>
                     <Text style={styles.tagText}>{item.tags}</Text>
-                    <View style={styles.tags}></View>
+                    <View style={styles.tags}>
+                      <Text style={styles.tagText}>{item.tags}</Text>
+                    </View>
                   </View>
                   <View>
                     <MenuProvider style={styles.optionContainer}>
@@ -489,11 +491,12 @@ const triggerStyles = {
 
 const styles = StyleSheet.create({
   dataContainer: {
-    backgroundColor: 'white', // Assuming you want a white background
-    borderRadius: 8, // Assuming you want rounded corners
+    backgroundColor: 'white',
+    borderRadius: 8,
     padding: 10,
-    margin: 10,
-    shadowColor: '#000',
+    marginVertical: 10,
+    marginHorizontal: 5,
+    shadowColor: 'red',
     shadowOffset: {
       width: 0,
       height: 2,
@@ -501,6 +504,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   title: {
     fontSize: 20,
@@ -513,9 +519,19 @@ const styles = StyleSheet.create({
   tagText: {
     fontSize: 14,
     marginTop: 5,
+    textAlign: 'center',
   },
   tags: {
-    // Add styles for tags view if needed
+    marginTop: 8,
+    // width: 49,
+    // height: 20,
+    fontSize: 25,
+    // fontWeight: 'bold',
+    // color: 'red',
+    borderWidth: 1,
+    borderRadius: 5,
+    textAlign: 'center',
+    backgroundColor: '#427DFE',
   },
   optionContainer: {
     // Add styles for option container view if needed
