@@ -15,7 +15,6 @@ import TabBarAddIcon from '../components/tabBarIcon/TabBarAddIcon';
 import auth from '@react-native-firebase/auth';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
 
 import {useNavigation} from '@react-navigation/native';
 
@@ -103,11 +102,9 @@ const Navigation = () => {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Signup" component={SignUp} />
           <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
-          {/* <Stack.Screen name="Home" component={Home} /> */}
         </Stack.Group>
       ) : (
         <Stack.Group>
-          {/* <Stack.Screen name="Splash" component={Splash} /> */}
           <Stack.Screen name="Tab" component={TabNavigation} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Login" component={Login} />

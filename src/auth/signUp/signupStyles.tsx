@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../constants/Colors';
 
 const signUpStyles = StyleSheet.create({
   screen: {
@@ -9,22 +10,20 @@ const signUpStyles = StyleSheet.create({
     marginHorizontal: 15,
   },
   titleStyle: {
-    // left: 90,
     left: '135%',
   },
   heading: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 30,
     fontWeight: 'bold',
     marginTop: 20,
   },
   message: {
-    color: 'gray',
+    color: Colors.gray,
     fontWeight: '500',
     marginBottom: 30,
   },
   bottom: {
-    // marginTop: 150,
     marginTop: '47%',
   },
   bottomContainer: {
@@ -33,11 +32,11 @@ const signUpStyles = StyleSheet.create({
     marginTop: 10,
   },
   bottomContainerText: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 15,
   },
   bottomContainerLink: {
-    color: '#7EBB4F',
+    color: Colors.Green,
     marginLeft: 5,
     fontSize: 15,
   },

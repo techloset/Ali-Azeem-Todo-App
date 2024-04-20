@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../../constants/Colors';
 
-const Styles = StyleSheet.create({
+const ListViewStyles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   container: {
     marginHorizontal: 15,
@@ -20,11 +21,11 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 16,
     borderWidth: 1,
-    borderColor: '#D2D2D2',
+    borderColor: Colors.lightgray,
     borderRadius: 4,
   },
   search: {
-    color: 'black',
+    color: Colors.black,
   },
   searchIcon: {
     width: 16,
@@ -37,7 +38,7 @@ const Styles = StyleSheet.create({
     marginTop: 200,
   },
   centerTextHead: {
-    color: 'black',
+    color: Colors.black,
     fontWeight: '700',
     fontSize: 18,
   },
@@ -52,55 +53,47 @@ const Styles = StyleSheet.create({
     marginTop: '70%',
   },
   dataContainer: {
-    flex: 1,
-    padding: 16,
+    backgroundColor: Colors.white,
+    borderRadius: 8,
+    padding: 10,
+    marginVertical: 10,
+    marginHorizontal: 5,
+    shadowColor: 'red',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderWidth: 1,
-    borderColor: 'lightblue',
-    marginTop: 5,
-    borderRadius: 5,
-    marginBottom: 5,
-    shadowColor: 'red',
-    shadowOffset: {width: 10, height: 12},
-    shadowRadius: 1,
   },
   title: {
-    fontWeight: '700',
-    fontSize: 30,
-    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   note: {
-    fontSize: 15,
-    color: 'black',
+    fontSize: 16,
+    marginTop: 5,
   },
   tags: {
     marginTop: 8,
-    width: 49,
-    height: 20,
-    fontSize: 25,
-    // fontWeight: 'bold',
-    // color: 'red',
-    borderWidth: 1,
     borderRadius: 5,
-    textAlign: 'center',
-    backgroundColor: '#427DFE',
+    width: 60,
   },
   tagText: {
-    color: 'black',
-    fontSize: 18,
+    fontSize: 14,
+    padding: 4,
     textAlign: 'center',
+    color: Colors.white,
   },
-  optionContainer: {
-    flex: 1,
-    alignItems: 'flex-end',
-  },
-  options: {
-    width: 20,
-    height: 30,
-    left: 20,
+  dateTime: {
+    marginTop: 5,
+    fontSize: 14,
+    color: Colors.gray,
   },
 });
 
-export default Styles;
+export default ListViewStyles;

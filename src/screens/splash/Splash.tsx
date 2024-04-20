@@ -2,6 +2,7 @@ import {StyleSheet, View} from 'react-native';
 import React, {useEffect} from 'react';
 import * as Animatable from 'react-native-animatable';
 import {NavigationProp} from '@react-navigation/native';
+import Colors from '../../constants/Colors';
 
 interface SplashProps {
   navigation: NavigationProp<any>;
@@ -11,15 +12,8 @@ const Splash: React.FC<SplashProps> = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
       navigation.navigate('Intro');
-      // navigation.navigate('Home');
     }, 2000);
   }, []);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     // navigation.navigate('Intro');
-  //     navigation.navigate('Home');
-  //   }, 2000);
-  // }, []);
   return (
     <View style={styles.screen}>
       <Animatable.Image
@@ -35,7 +29,7 @@ export default Splash;
 
 const styles = StyleSheet.create({
   screen: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

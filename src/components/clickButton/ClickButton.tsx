@@ -1,6 +1,6 @@
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
-import Colors from '../../utils/Colors';
+import Colors from '../../constants/Colors';
 
 const ClickButton = ({text, onPress}: any) => {
   return (
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   button: {
     textAlign: 'center',
     fontSize: 20,
-    color: 'white',
+    color: Colors.white,
     fontWeight: 'bold',
     margin: '2%',
   },

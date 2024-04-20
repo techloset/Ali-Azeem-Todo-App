@@ -1,5 +1,6 @@
 import {View, Text, TextInput, StyleSheet} from 'react-native';
 import React from 'react';
+import Colors from '../../constants/Colors';
 
 const Placeholder = ({title, placeholder, value, onChangeText}: any) => {
   return (
@@ -21,13 +22,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   title: {
-    color: 'black',
+    color: Colors.black,
   },
   Placeholder: {
     borderWidth: 1,
-    borderColor: '#D2D2D2',
+    borderColor: Colors.lightgray,
     borderRadius: 5,
-    color: 'black',
+    color: Colors.black,
     marginTop: 5,
     padding: 5,
     paddingLeft: 15,

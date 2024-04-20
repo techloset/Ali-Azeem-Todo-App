@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../../constants/Colors';
 
-const Styles = StyleSheet.create({
+const ProfileTabStyles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   container: {
     marginHorizontal: 15,
@@ -22,16 +23,16 @@ const Styles = StyleSheet.create({
     borderRadius: 100,
   },
   userInfo: {
-    marginLeft: -40,
+    marginLeft: '-15%',
   },
   name: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#0B0A11',
+    color: Colors.white,
   },
   email: {
     fontSize: 14,
-    color: 'gray',
+    color: Colors.gray,
   },
   edit: {
     width: 16,
@@ -47,7 +48,7 @@ const Styles = StyleSheet.create({
   aboutText: {
     fontSize: 12,
     fontWeight: '400',
-    color: 'lightgray',
+    color: Colors.lightgray,
     marginVertical: 8,
   },
   changePassword: {
@@ -56,13 +57,13 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 12,
     paddingBottom: 12,
-    borderBottomColor: 'lightgrey',
+    borderBottomColor: Colors.lightgray,
     borderBottomWidth: 1,
   },
   changePasswordText: {
     fontSize: 12,
     fontWeight: '400',
-    color: 'black',
+    color: Colors.white,
   },
   signOut: {
     fontSize: 12,
@@ -74,10 +75,10 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
   },
   endText: {
-    color: 'lightgray',
+    color: Colors.lightgray,
     fontSize: 12,
     fontWeight: '400',
   },
 });
 
-export default Styles;
+export default ProfileTabStyles;

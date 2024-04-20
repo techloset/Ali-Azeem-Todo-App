@@ -35,8 +35,7 @@ const useSignup = ({navigation}: any) => {
             console.log('User data added to Firestore successfully');
             Alert.alert('User signup successful');
             if (navigation) {
-              // Check if navigation is defined
-              navigation.navigate('Home'); // Navigate to 'Home' screen
+              navigation.navigate('Home');
             } else {
               console.error('Navigation prop is undefined');
             }

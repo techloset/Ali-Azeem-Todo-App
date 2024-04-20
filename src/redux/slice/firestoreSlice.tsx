@@ -37,11 +37,29 @@ const firestoreSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+    deleteDataStart(state) {
+      state.loading = true;
+      state.error = null;
+    },
+    deleteDataSuccess(state, action: PayloadAction<string>) {
+      state.loading = false;
+      state.data = state.data.filter(item => item.id !== action.payload);
+    },
+    deleteDataFailure(state, action: PayloadAction<any>) {
+      state.loading = false;
+      state.error = action.payload;
+    },
   },
 });
 
-export const {fetchDataStart, fetchDataSuccess, fetchDataFailure} =
-  firestoreSlice.actions;
+export const {
+  fetchDataStart,
+  fetchDataSuccess,
+  fetchDataFailure,
+  deleteDataStart,
+  deleteDataSuccess,
+  deleteDataFailure,
+} = firestoreSlice.actions;
 
 export const fetchDataFromFirestore = (): AppThunk => async dispatch => {
   try {
@@ -52,11 +70,24 @@ export const fetchDataFromFirestore = (): AppThunk => async dispatch => {
       title: doc.data().title,
       note: doc.data().note,
       tags: doc.data().tags,
+      datetime: doc.data().datetime,
     })) as TaskData[];
     dispatch(fetchDataSuccess(data));
   } catch (error) {
     dispatch(fetchDataFailure(error));
   }
 };
+
+export const deleteDataFromFirestore =
+  (id: string): AppThunk =>
+  async dispatch => {
+    try {
+      dispatch(deleteDataStart());
+      await firestore().collection('tasks').doc(id).delete();
+      dispatch(deleteDataSuccess(id));
+    } catch (error) {
+      dispatch(deleteDataFailure(error));
+    }
+  };
 
 export default firestoreSlice.reducer;

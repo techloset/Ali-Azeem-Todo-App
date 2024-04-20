@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../constants/Colors';
 
 const introStyles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   container: {
     flexDirection: 'column',
@@ -18,12 +19,12 @@ const introStyles = StyleSheet.create({
   },
   text1: {
     marginTop: '45%',
-    color: 'black',
+    color: Colors.black,
     fontWeight: 'bold',
     fontSize: 25,
   },
   text2: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 14,
   },
   button1: {
@@ -32,7 +33,7 @@ const introStyles = StyleSheet.create({
   button2Container: {
     marginTop: '2.65%',
     borderWidth: 1,
-    borderColor: '#7EBB4F',
+    borderColor: Colors.Green,
     width: '100%',
     height: '6%',
     borderRadius: 5,
@@ -40,7 +41,7 @@ const introStyles = StyleSheet.create({
   button2: {
     textAlign: 'center',
     fontSize: 20,
-    color: '#7EBB4F',
+    color: Colors.Green,
     fontWeight: 'bold',
     margin: '1.7%',
   },

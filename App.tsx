@@ -357,7 +357,18 @@
 //
 //
 //
+// Google Authentication
+// import React from 'react';
+// import Google from './src/auth/logIn/Google';
 
+// const App = () => {
+//   return <Google />;
+// };
+
+// export default App;
+//
+//
+//
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import Navigation from './src/navigation/Navigation';
@@ -374,6 +385,10 @@ const App = () => {
 };
 
 export default App;
+//
+//
+//
+//
 // import React from 'react';
 // import {Alert, StyleSheet, Text, View} from 'react-native';
 // import {

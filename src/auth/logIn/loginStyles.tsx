@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../constants/Colors';
 
 const loginStyles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   container: {
     marginHorizontal: 15,
@@ -12,7 +13,7 @@ const loginStyles = StyleSheet.create({
     left: 100,
   },
   heading: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 30,
     fontWeight: 'bold',
     marginTop: 20,
@@ -25,14 +26,14 @@ const loginStyles = StyleSheet.create({
   linkContainer: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
-    color: 'black',
+    color: Colors.black,
   },
   forgetText: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 15,
   },
   bottomContainerLink: {
-    color: '#7EBB4F',
+    color: Colors.Green,
     marginLeft: 5,
     fontSize: 15,
   },
@@ -49,7 +50,7 @@ const loginStyles = StyleSheet.create({
     width: 70,
     height: 70,
     borderWidth: 1,
-    borderColor: 'lightgrey',
+    borderColor: Colors.lightgray,
     borderRadius: 40,
   },
   bottom: {

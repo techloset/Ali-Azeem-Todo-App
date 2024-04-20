@@ -1,12 +1,17 @@
 import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import CustomBackButtonHeading from '../../../components/customBackButtonHeading/CustomBackButtonHeading';
-import Styles from './Styles';
+import Styles from './profileTabStyles';
 
 import auth from '@react-native-firebase/auth';
 
 const ProfileTab = ({navigation}: any) => {
-  const user = auth()?.currentUser;
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const currentUser = auth()?.currentUser;
+    setUser(currentUser);
+  }, []);
 
   const signout = async () => {
     await auth().signOut();
@@ -24,13 +29,17 @@ const ProfileTab = ({navigation}: any) => {
         <View style={Styles.profile}>
           <View>
             <Image
-              source={require('../../../../assets/MyPic.png')}
+              source={
+                user?.photoURL
+                  ? {uri: user.photoURL}
+                  : require('../../../../assets/emptyProfileFree.png')
+              }
               style={Styles.dp}
             />
           </View>
           <View style={Styles.userInfo}>
-            <Text style={Styles.name}>Ali Azeem</Text>
-            <Text style={Styles.email}>aliazeemaliazeem786@gmail.com</Text>
+            <Text style={Styles.name}>{user?.displayName || 'Name'}</Text>
+            <Text style={Styles.email}>{user?.email || 'Email'}</Text>
           </View>
           <View>
             <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
