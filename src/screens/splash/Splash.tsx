@@ -3,6 +3,7 @@ import React, {useEffect} from 'react';
 import * as Animatable from 'react-native-animatable';
 import {NavigationProp} from '@react-navigation/native';
 import Colors from '../../constants/Colors';
+import Images from '../../constants/Images';
 
 interface SplashProps {
   navigation: NavigationProp<any>;
@@ -19,7 +20,7 @@ const Splash: React.FC<SplashProps> = ({navigation}) => {
       <Animatable.Image
         duration={1000}
         animation={'bounce'}
-        source={require('../../../assets/splashLogo.png')}
+        source={Images.SplashScreen}
       />
     </View>
   );

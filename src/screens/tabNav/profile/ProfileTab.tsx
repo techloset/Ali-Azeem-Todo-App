@@ -2,11 +2,13 @@ import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import CustomBackButtonHeading from '../../../components/customBackButtonHeading/CustomBackButtonHeading';
 import Styles from './profileTabStyles';
+import {User} from '@react-native-firebase/auth';
 
 import auth from '@react-native-firebase/auth';
+import Images from '../../../constants/Images';
 
 const ProfileTab = ({navigation}: any) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const currentUser = auth()?.currentUser;
@@ -30,9 +32,7 @@ const ProfileTab = ({navigation}: any) => {
           <View>
             <Image
               source={
-                user?.photoURL
-                  ? {uri: user.photoURL}
-                  : require('../../../../assets/emptyProfileFree.png')
+                user?.photoURL ? {uri: user.photoURL} : Images.EmptyProfileFree
               }
               style={Styles.dp}
             />
@@ -43,23 +43,12 @@ const ProfileTab = ({navigation}: any) => {
           </View>
           <View>
             <TouchableOpacity onPress={() => navigation.navigate('Edit')}>
-              <Image
-                source={require('../../../../assets/edit.png')}
-                style={Styles.edit}
-              />
+              <Image source={Images.Edit} style={Styles.edit} />
             </TouchableOpacity>
           </View>
         </View>
         <View style={Styles.about}>
           <Text style={Styles.aboutText}>About</Text>
-        </View>
-        <View style={Styles.changePassword}>
-          <View>
-            <Text style={Styles.changePasswordText}>Change Password</Text>
-          </View>
-          <View>
-            <Image source={require('../../../../assets/nextButton.png')} />
-          </View>
         </View>
         <TouchableOpacity
           onPress={() => {

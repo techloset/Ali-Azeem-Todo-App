@@ -2,6 +2,12 @@ import {StyleSheet} from 'react-native';
 import Colors from '../../../constants/Colors';
 
 const AddTaskStyles = StyleSheet.create({
+  scrollViewContainer: {
+    flex: 1,
+    backgroundColor: '#FFFFFF', // Background color of the ScrollView
+    paddingHorizontal: 20, // Horizontal padding
+    paddingTop: 20, // Top padding
+  },
   screen: {
     flex: 1,
     backgroundColor: Colors.white,

@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   TextInput,
   TouchableOpacity,
-  Alert,
   ActivityIndicator,
   Image,
 } from 'react-native';
@@ -15,6 +14,7 @@ import {Dropdown} from 'react-native-element-dropdown';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import useAddTask from './useAddTask';
 import Colors from '../../../constants/Colors';
+import Images from '../../../constants/Images';
 
 const AddTask = ({navigation}: any) => {
   const {
@@ -84,7 +84,7 @@ const AddTask = ({navigation}: any) => {
             }}
             renderLeftIcon={() => (
               <Image
-                source={require('../../../../assets/hash.png')}
+                source={Images.Hash}
                 style={[
                   {width: 10, height: 10},
                   value && {tintColor: getLeftIconColor()},
@@ -154,7 +154,7 @@ const AddTask = ({navigation}: any) => {
             </View>
             <View>
               <Image
-                source={require('../../../../assets/edit.png')}
+                source={Images.Edit}
                 style={{
                   marginTop: '50%',
                 }}

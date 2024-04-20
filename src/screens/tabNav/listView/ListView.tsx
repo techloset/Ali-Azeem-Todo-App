@@ -12,6 +12,7 @@ import {Image} from 'react-native-animatable';
 import Styles from './listViewStyles';
 import OptionsMenu from 'react-native-options-menu';
 import useListView from './useListView';
+import Images from '../../../constants/Images';
 
 const MoreIcon = require('../../../../assets/options.png');
 
@@ -24,17 +25,14 @@ const ListView = () => {
       <View style={Styles.screen}>
         <View style={Styles.container}>
           <View style={Styles.logo}>
-            <Image source={require('../../../../assets/screenLogo.png')} />
+            <Image source={Images.ScreenLogo} />
           </View>
           <View style={Styles.searchBar}>
             <TextInput
               placeholder="Search task here..."
               style={Styles.search}
             />
-            <Image
-              source={require('../../../../assets/search.png')}
-              style={Styles.searchIcon}
-            />
+            <Image source={Images.Search} style={Styles.searchIcon} />
           </View>
           {loading && data.length === 0 && (
             <View style={Styles.loaderContainer}>
@@ -44,7 +42,7 @@ const ListView = () => {
           {data.length === 0 && !loading && (
             <View style={Styles.center}>
               <TouchableOpacity onPress={handleNavigateToAddTask}>
-                <Image source={require('../../../../assets/EmptyState.png')} />
+                <Image source={Images.EmptyState} />
               </TouchableOpacity>
               <Text style={Styles.centerTextHead}>No Task</Text>
               <Text style={Styles.centerTextBody}>

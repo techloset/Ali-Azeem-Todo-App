@@ -4,6 +4,7 @@ import CustomBackButtonHeading from '../../../../components/customBackButtonHead
 import Placeholder from '../../../../components/placeholder/Placeholder';
 import ClickButton from '../../../../components/clickButton/ClickButton';
 import Styles from './editTabStyles';
+import Images from '../../../../constants/Images';
 
 const EditTab = () => {
   return (
@@ -14,10 +15,7 @@ const EditTab = () => {
           titleStyle={Styles.titleStyle}
         />
         <View style={Styles.profile}>
-          <Image
-            source={require('../../../../../assets/MyPic.png')}
-            style={Styles.dp}
-          />
+          <Image source={Images.EmptyProfileFree} style={Styles.dp} />
         </View>
         <Placeholder title="Full Name" placeholder="Username" />
         <Placeholder title="Email Address" placeholder="E-mail" />

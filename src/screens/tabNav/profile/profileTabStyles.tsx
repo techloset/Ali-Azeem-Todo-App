@@ -69,6 +69,7 @@ const ProfileTabStyles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '400',
     color: '#BA1735',
+    marginTop: 10,
   },
   end: {
     top: 490 - 33,

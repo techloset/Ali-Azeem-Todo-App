@@ -12,6 +12,7 @@ import Placeholder from '../../components/placeholder/Placeholder';
 import ClickButton from '../../components/clickButton/ClickButton';
 import loginStyles from './loginStyles';
 import UseLogin from './useLogin';
+import Images from '../../constants/Images';
 
 const Login = ({navigation}: any) => {
   const [loading, setLoading] = useState(false);
@@ -59,16 +60,10 @@ const Login = ({navigation}: any) => {
         </View>
         <View style={loginStyles.googleAuth}>
           <View>
-            <Image
-              source={require('../../../assets/or.png')}
-              style={loginStyles.or}
-            />
+            <Image source={Images.Or} style={loginStyles.or} />
           </View>
           <TouchableOpacity onPress={GoogleSignIn}>
-            <Image
-              source={require('../../../assets/google.png')}
-              style={loginStyles.googleIcon}
-            />
+            <Image source={Images.Google} style={loginStyles.googleIcon} />
           </TouchableOpacity>
         </View>
         <View style={loginStyles.bottom}></View>
